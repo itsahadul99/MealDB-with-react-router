@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
-
+/* eslint-disable react/prop-types */
 const Meal = ({ meal }) => {
-    console.log(meal);
-    
     return (
         <div className="shadow-lg rounded-lg border">
             <div className="flex flex-col justify-center items-center p-5 space-y-3">

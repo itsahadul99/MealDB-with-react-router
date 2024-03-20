@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Meals from './components/Meals/Meals.jsx';
 import RandomMeal from './components/RandomMeal/RandomMeal.jsx';
+import MoreMeals from './components/MoreMeals/MoreMeals.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,6 +25,9 @@ const router = createBrowserRouter([
         element: <Meals/>
       },
       {
+        path: '/moreMeals',
+        loader: () => fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=e'),
+        element: <MoreMeals/>
       }
     ]
   }
